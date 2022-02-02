@@ -30,14 +30,9 @@ dependencies {
 }
 
 
-//dependencies {
-//    implementation("org.springframework.boot:spring-boot-starter")
-//    testImplementation("org.springframework.boot:spring-boot-starter-test")
-//}
-//
-//tasks.withType<KotlinCompile> {
-//    kotlinOptions {
-//        freeCompilerArgs = listOf("-Xjsr305=strict")
-//        jvmTarget = "11"
-//    }
-//}
+
+tasks.bootJar {
+    enabled = false
+}
+
+
