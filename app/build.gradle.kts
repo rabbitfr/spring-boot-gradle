@@ -3,15 +3,10 @@
  */
 
 plugins {
-    id("com.quickfds.api.kotlin-application-conventions")
+    id("com.quickfds.api.kotlin-spring-library-conventions")
 }
 
 dependencies {
     implementation("org.apache.commons:commons-text")
     implementation(project(":lib"))
-}
-
-application {
-    // Define the main class for the application.
-    mainClass.set("com.quickfds.api.app.AppKt")
 }

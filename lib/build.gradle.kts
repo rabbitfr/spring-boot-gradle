@@ -3,5 +3,5 @@
  */
 
 plugins {
-    id("com.quickfds.api.kotlin-library-conventions")
+    id("com.quickfds.api.kotlin-spring-library-conventions")
 }
