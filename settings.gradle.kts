@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "spring-boot-gradle"
-include("app", "list", "utilities")
+include("app", "lib")
