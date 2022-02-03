@@ -9,11 +9,6 @@ plugins {
     id("org.jetbrains.kotlin.jvm")
 }
 
-repositories {
-    // Use Maven Central for resolving dependencies.
-    mavenCentral()
-}
-
 /**
  * pour simplifier tu peux faire ça https://docs.gradle.org/current/userguide/toolchains.html#sec:consuming
 16:03 < eskatos[m]> java et kotlin seront alors automatiquement en java 11, et le build, si lancé avec une autre jvm téléchargera automatiquement java 11 pour compiler et faire  tourner les tests
