@@ -9,11 +9,6 @@ plugins {
     id("org.jetbrains.kotlin.jvm")
 }
 
-repositories {
-    // Use Maven Central for resolving dependencies.
-    mavenCentral()
-}
-
 /**
  * pour simplifier tu peux faire ça https://docs.gradle.org/current/userguide/toolchains.html#sec:consuming
 16:03 < eskatos[m]> java et kotlin seront alors automatiquement en java 11, et le build, si lancé avec une autre jvm téléchargera automatiquement java 11 pour compiler et faire  tourner les tests
@@ -27,12 +22,6 @@ java {
 }
 
 dependencies {
-    constraints {
-        // Define dependency versions as constraints
-        implementation("org.apache.commons:commons-text:1.9")
-
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    }
 
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
@@ -44,7 +33,7 @@ dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
     // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+    testImplementation(versionCatalogs.libs.findLibrary("junit-jupiter").get())
 }
 
 tasks.test {
@@ -52,9 +41,8 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<KotlinCompile> {
+tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "11"
     }
 }

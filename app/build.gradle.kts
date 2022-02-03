@@ -7,6 +7,6 @@ plugins {
 }
 
 dependencies {
-    implementation("org.apache.commons:commons-text")
     implementation(project(":lib"))
+    implementation(libs.commons.text)
 }

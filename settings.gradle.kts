@@ -9,3 +9,10 @@
 
 rootProject.name = "spring-boot-gradle"
 include("app", "lib")
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        mavenCentral()
+    }
+}
