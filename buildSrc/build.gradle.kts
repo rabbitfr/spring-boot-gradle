@@ -7,14 +7,6 @@ plugins {
     `kotlin-dsl`
 }
 
-repositories {
-    // Use the plugin portal to apply community plugins in convention plugins.
-    gradlePluginPortal()
-
-    mavenCentral()
-
-}
-
 /**
  * trouver le plugin sur le portal: https://plugins.gradle.org/plugin/org.jetbrains.kotlin.plugin.spring
  */
@@ -24,4 +16,3 @@ dependencies {
     // le plugin `org.jetbrains.kotlin.plugin.spring` est contenu dans l'artifact `org.jetbrains.kotlin:kotlin-allopen`
     implementation("org.jetbrains.kotlin:kotlin-allopen")
 }
-
