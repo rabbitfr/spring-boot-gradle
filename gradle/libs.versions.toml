@@ -1,0 +1,2 @@
+[libraries]
+springboot-gradleplugin = "org.springframework.boot:spring-boot-gradle-plugin:2.6.3"
