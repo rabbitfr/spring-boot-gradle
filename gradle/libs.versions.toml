@@ -1,2 +1,4 @@
 [libraries]
 springboot-gradleplugin = "org.springframework.boot:spring-boot-gradle-plugin:2.6.3"
+commons-text = "org.apache.commons:commons-text:1.9"
+junit-jupiter = "org.junit.jupiter:junit-jupiter:5.7.2"

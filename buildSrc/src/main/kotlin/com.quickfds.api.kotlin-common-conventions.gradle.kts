@@ -22,12 +22,6 @@ java {
 }
 
 dependencies {
-    constraints {
-        // Define dependency versions as constraints
-        implementation("org.apache.commons:commons-text:1.9")
-
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    }
 
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
@@ -39,7 +33,7 @@ dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
     // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+    testImplementation(versionCatalogs.libs.findLibrary("junit-jupiter").get())
 }
 
 tasks.test {
