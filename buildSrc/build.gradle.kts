@@ -7,6 +7,12 @@ plugins {
     `kotlin-dsl`
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of("8"))
+    }
+}
+
 /**
  * trouver le plugin sur le portal: https://plugins.gradle.org/plugin/org.jetbrains.kotlin.plugin.spring
  */
